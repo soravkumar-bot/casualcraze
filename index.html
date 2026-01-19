@@ -184,6 +184,38 @@
     </div>
   </footer>
 
+<!-- Age Verification Popup -->
+<div id="age-verification" class="age-overlay">
+  <div class="age-popup">
+    <h2>Age Verification</h2>
+    <p>This site is intended for users aged 18 or older.
+Please confirm your age to continue.</p>
+    <div class="age-buttons">
+      <button id="btn-yes">I am 18+</button>
+      <button id="btn-no">Exit</button>
+    </div>
+  </div>
+</div>
+ 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var yesBtn = document.getElementById("btn-yes");
+    var noBtn = document.getElementById("btn-no");
+ 
+    // Change these URLs as you want
+    var yesLink = "/home/";  
+    var noLink = "/home/";  
+ 
+    yesBtn.addEventListener("click", function () {
+      window.location.href = yesLink;
+    });
+ 
+    noBtn.addEventListener("click", function () {
+      window.location.href = noLink;
+    });
+  });
+</script>
+
   <!-- JS -->
   <script>
     const playButtons = document.querySelectorAll(".play-btn");
@@ -209,3 +241,4 @@
 
 </body>
 </html>
+
