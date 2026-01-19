@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CasualCraze - Play Social Games</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">casualcraze</div>
+    <div class="nav-links">
+      <a href="index.html#games">Games</a>
+      <a href="index.html#community">Community</a>
+      <a href="index.html#rewards">Rewards</a>
+      <a href="about.html">About Us</a>
+    </div>
+    <a class="nav-btn" href="#games">Play Now</a>
+  </nav>
+
+ <!-- Page Header -->
+  <header class="hero small-hero">
+    <div class="hero-content">
+      <h1>About <span>CasualCraze</span></h1>
+      <p>A place for instant, social, and stress-free online games.</p>
+    </div>
+  </header>
+ <!-- About Section -->
+  <section class="content-section">
+    <div class="content-card">
+      <h2>What is CasualCraze?</h2>
+      <p>
+        CasualCraze is a browser-based social gaming platform designed for
+        quick entertainment. Our games load instantly and can be played
+        directly on the website without downloads or installations.
+      </p>
+      <p>
+        All experiences are created purely for fun and relaxation.
+        No real-money gaming, betting, or financial rewards are involved.
+      </p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="content-section alt">
+    <div class="content-card">
+      <h2>How It Works</h2>
+
+      <div class="steps-grid">
+        <div class="step">
+          <h3>1. Choose a Game</h3>
+          <p>Browse our collection of arcade, puzzle, action, and trivia games.</p>
+        </div>
+
+        <div class="step">
+          <h3>2. Click Play</h3>
+          <p>The game opens instantly on the same page — no redirects.</p>
+        </div>
+
+        <div class="step">
+          <h3>3. Enjoy & Relax</h3>
+          <p>Play casually, compete for fun, and enjoy stress-free gameplay.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Section -->
+  <section class="content-section">
+    <div class="content-card">
+      <h2>Safe & Responsible Play</h2>
+      <p>
+        CasualCraze is built for entertainment only.
+        We do not offer cash prizes, wagering, or real-money features.
+      </p>
+      <p>
+        We encourage balanced play and responsible screen time.
+        Our platform is suitable for casual users looking to unwind.
+      </p>
+    </div>
+  </section>
+
+
+
+  <!-- Support Section -->
+  <section id="support" class="support-section">
+    <div class="support-card">
+      <h2>Support</h2>
+      <p>Need help? Contact us anytime — we are available 24/7.</p>
+      <a class="btn secondary" href="mailto:support@casualcraze.com">Email Support</a>
+    </div>
+  </section>
+
+  <!-- Footer with Legal Links -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">casualcraze</div>
+      <div class="footer-links">
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="cookie.html">Cookie Policy</a>
+        
+      </div>
+      <div class="footer-copy">© 2026 CasualCraze. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const playButtons = document.querySelectorAll(".play-btn");
+    const gameFrame = document.getElementById("gameFrame");
+    const iframeSection = document.getElementById("iframeSection");
+
+    const closeBtn = document.getElementById("closeFrame");
+
+    playButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const url = btn.getAttribute("data-src");
+        gameFrame.src = url;
+        iframeSection.style.display = "block";
+        window.scrollTo(0, iframeSection.offsetTop);
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      gameFrame.src = "";
+      iframeSection.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>

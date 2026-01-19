@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CasualCraze - Play Social Games</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">casualcraze</div>
+    <div class="nav-links">
+      <a href="#games">Games</a>
+      <a href="#community">Community</a>
+      <a href="#rewards">Rewards</a>
+      <a href="about.html">About Us</a>
+    </div>
+    <a class="nav-btn" href="#games">Play Now</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Play fun social games <span>instantly</span></h1>
+      <p>Join the casual craze - play fun games on our site. No downloads. No redirects.</p>
+      <div class="hero-buttons">
+        <a class="btn primary" href="#games">Start Playing</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <strong>4</strong>
+          <span>Games in one page</span>
+        </div>
+        <div class="stat">
+          <strong>24/7</strong>
+          <span>Support & chat</span>
+        </div>
+        <div class="stat">
+          <strong>100%</strong>
+          <span>Safe & secure</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Games Section -->
+  <section id="games" class="games-section">
+    <div class="section-heading">
+      <h2>Featured Games</h2>
+      <p>Click Play Now to open the game right here on this page.</p>
+    </div>
+
+    <div class="games-grid">
+
+      <!-- Game 1 -->
+    <div class="games-grid">
+
+  <!-- Game 1: Pinball Game -->
+  <div class="game-card game1">
+    <div class="game-head">
+      <h3>Pinball Game</h3>
+      <span class="tag">Arcade</span>
+    </div>
+    <p>Classic pinball action with unique physics!</p>
+    <div class="iframe-wrapper">
+      <button class="play-btn" data-src="https://idev.games/embed/pinball-game">
+        ▶ Play Now
+      </button>
+    </div>
+  </div>
+
+  <!-- Game 2: Halloween Party -->
+  <div class="game-card game2">
+    <div class="game-head">
+      <h3>Halloween Party</h3>
+      <span class="tag">Puzzle</span>
+    </div>
+    <p>Match symbols and complete fun tasks!</p>
+    <div class="iframe-wrapper">
+      <button class="play-btn" data-src="https://idev.games/embed/halloween-party">
+        ▶ Play Now
+      </button>
+    </div>
+  </div>
+
+  <!-- Game 3: Die -->
+  <div class="game-card game3">
+    <div class="game-head">
+      <h3>Die</h3>
+      <span class="tag">Action</span>
+    </div>
+    <p>Survive as long as you can in this arcade test!</p>
+    <div class="iframe-wrapper">
+      <button class="play-btn" data-src="https://idev.games/embed/die">
+        ▶ Play Now
+      </button>
+    </div>
+  </div>
+
+  <!-- Game 4: Quiz Game -->
+  <div class="game-card game4">
+    <div class="game-head">
+      <h3>Quiz Game</h3>
+      <span class="tag">Trivia</span>
+    </div>
+    <p>Test your wits with this interactive quiz!</p>
+    <div class="iframe-wrapper">
+      <button class="play-btn" data-src="https://idev.games/embed/quiz-game">
+        ▶ Play Now
+      </button>
+    </div>
+  </div>
+
+</div>
+
+
+    </div>
+  </section>
+
+  <!-- Iframe Section -->
+  <section id="iframeSection" class="iframe-section">
+
+    <div class="iframe-card">
+      <div class="iframe-header">
+        <h2>Playing Now</h2>
+        <button id="closeFrame" class="btn secondary">Close</button>
+      </div>
+      <iframe id="gameFrame" src="" frameborder="0"></iframe>
+    </div>
+  </section>
+
+  <!-- Community Section -->
+  <section id="community" class="community-section">
+    <div class="community-card">
+      <h2>Join the Community</h2>
+      <p>Chat with players, join tournaments, and unlock rewards every week.</p>
+      <a class="btn primary" href="#games">Play Now</a>
+    </div>
+  </section>
+
+  <!-- Rewards Section -->
+  <section id="rewards" class="rewards-section">
+    <div class="rewards-card">
+      <h2>Rewards & Achievements</h2>
+      <div class="rewards-grid">
+        <div class="reward">
+          <h3>Daily Bonus</h3>
+          <p>Login daily and earn coins to buy skins.</p>
+        </div>
+        <div class="reward">
+          <h3>Leaderboards</h3>
+          <p>Top players get exclusive badges and titles.</p>
+        </div>
+        <div class="reward">
+          <h3>Challenges</h3>
+          <p>Complete missions and level up faster.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support Section -->
+  <section id="support" class="support-section">
+    <div class="support-card">
+      <h2>Support</h2>
+      <p>Need help? Contact us anytime — we are available 24/7.</p>
+      <a class="btn secondary" href="mailto:support@casualcraze.com">Email Support</a>
+    </div>
+  </section>
+
+  <!-- Footer with Legal Links -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">casualcraze</div>
+      <div class="footer-links">
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="cookie.html">Cookie Policy</a>
+        
+      </div>
+      <div class="footer-copy">© 2026 CasualCraze. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const playButtons = document.querySelectorAll(".play-btn");
+    const gameFrame = document.getElementById("gameFrame");
+    const iframeSection = document.getElementById("iframeSection");
+
+    const closeBtn = document.getElementById("closeFrame");
+
+    playButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const url = btn.getAttribute("data-src");
+        gameFrame.src = url;
+        iframeSection.style.display = "block";
+        window.scrollTo(0, iframeSection.offsetTop);
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      gameFrame.src = "";
+      iframeSection.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
